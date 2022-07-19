@@ -1,14 +1,16 @@
-import Sequelize ,{Model}from 'sequelize'
+import Sequelize, { Model } from 'sequelize';
 
-const {STRING:string,BOOLEAN:bool}=Sequelize
-class User extends Model{
-static init (sequelize){
-  super.init({
-    name:string,
-    email:bool,
-    password_hash:string,
-    provider:bool
-  },{sequelize})
-}
+class User extends Model {
+  static init(sequelize) {
+    super.init(
+      {
+        name: Sequelize.STRING,
+        email: Sequelize.STRING,
+        password_hash: Sequelize.STRING,
+        provider: Sequelize.BOOLEAN,
+      },
+      { sequelize },
+    );
+  }
 }
 export default User;
