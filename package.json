@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "express": "^4.18.1",
     "pg": "^8.7.3",
     "pg-hstore": "^2.3.4",
@@ -13,10 +14,10 @@
     "dev": "nodemon src/server.js",
     "dev:debug": "nodemon --inspect src/server.js",
     "format:code": "eslint --fix src --ext .js",
-    "migration:undo-all":"node_modules/.bin/sequelize db:migrate:undo:all",
-    "migration:undo":"node_modules/.bin/sequelize db:migrate:undo",
-    "migration:run":"node_modules/.bin/sequelize db:migrate",
-    "migration:create":"node_modules/.bin/sequelize migration:create --name"
+    "migration:undo-all": "node_modules/.bin/sequelize db:migrate:undo:all",
+    "migration:undo": "node_modules/.bin/sequelize db:migrate:undo",
+    "migration:run": "node_modules/.bin/sequelize db:migrate",
+    "migration:create": "node_modules/.bin/sequelize migration:create --name"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.30.6",
