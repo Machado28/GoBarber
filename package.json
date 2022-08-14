@@ -11,7 +11,10 @@
     "pg": "^8.7.3",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.21.3",
-    "yup": "^0.32.11"
+    "yup": "^0.32.11",
+    "date-fns":"^2.0.0-beta.5"
+    
+
   },
   "scripts": {
     "dev": "nodemon src/server.js",
