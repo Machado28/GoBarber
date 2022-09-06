@@ -5,19 +5,23 @@
   "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "bee-queue": "^1.4.0",
+    "date-fns": "^2.0.0-beta.5",
     "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
     "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.5.2",
     "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.6.2",
+    "nodemailer-express-handlebars": "^5.0.0",
     "pg": "^8.7.3",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.21.3",
-    "yup": "^0.32.11",
-    "date-fns":"^2.0.0-beta.5"
-    
-
+    "yup": "^0.32.11"
   },
   "scripts": {
     "dev": "nodemon src/server.js",
+    "queue":"nodemon src/queue.js",
     "dev:debug": "nodemon --inspect src/server.js",
     "format:code": "eslint --fix src --ext .js",
     "migration:undo-all": "node_modules/.bin/sequelize db:migrate:undo:all",
@@ -26,6 +30,7 @@
     "migration:create": "node_modules/.bin/sequelize migration:create --name"
   },
   "devDependencies": {
+    "@types/nodemailer-express-handlebars": "^4.0.2",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
     "eslint": "^7.32.0 || ^8.2.0",
