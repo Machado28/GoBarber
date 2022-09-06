@@ -5,13 +5,13 @@ import redisConfig from '../config/redis';
 const jobs = [CancellationMail];
 class Queue {
   contructor() {
-    this.queues = {};
+    this.queues = [];
     this.init();
   }
 
   init() {
     jobs.forEach(({ key, handle }) => {
-      this.queues[key()] = {
+      this.queues[key] = {
         bee: new Bee(key(), {
           redis: redisConfig,
         }),
